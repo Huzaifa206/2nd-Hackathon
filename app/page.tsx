@@ -12,7 +12,7 @@ export default function Home() {
       <Header />
       <main>
        <div className="hero">
-         <div className="imagemain"><img src="/image.png" alt="Air Max Pulse" /></div>
+         <div className="imagemain"><img src="/Image.png" alt="Air Max Pulse" /></div>
          <h1>NIKE AIR MAX PULSE</h1>
          <p>
           Extreme comfort. Hyper durable. Max volume. Introducing the Air Max Pulse—designed to push you past your limits and help you go to the max.

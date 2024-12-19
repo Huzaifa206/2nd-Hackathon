@@ -36,7 +36,7 @@ export default function Login() {
           <p className="text-center"> <span className="text-text-secondary-gray">Not a Member? </span></p>
         
         </form>
-      <Link href="/Join-us" className="joinUsLink" >Join us</Link>
+      <Link href="/Join-us" className="flex items-center justify-center text-base font-bold mb-[2%] underline" >Join us</Link>
       </div>
       
       <Footer />

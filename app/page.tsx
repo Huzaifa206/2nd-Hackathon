@@ -11,26 +11,27 @@ export default function Home() {
       <TopHeader />
       <Header />
       <main>
-       <div className="hero">
-         <div className="imagemain"><img src="/image.png" alt="Air Max Pulse" /></div>
-         <h1>NIKE AIR MAX PULSE</h1>
-         <p>
+       <div className="flex flex-col justify-center items-center text-center p-5 gap-2.5 w-screen">
+         <div className="flex justify-center items-center mx-auto w-[80%]">
+           <img src="/Image.png" alt="Air Max Pulse" /></div>
+         <h1 className="text-2xl my-[15px_0]">NIKE AIR MAX PULSE</h1>
+         <p className="text-base mb-5 leading-[1.5]">
           Extreme comfort. Hyper durable. Max volume. Introducing the Air Max Pulse—designed to push you past your limits and help you go to the max.
          </p>
-         <div className="button-container">
-         <button className="button">Notify Me</button>
-         <button className="button secondary">Shop Air Max</button>
+         <div className="flex justify-center flex-wrap gap-2.5">
+         <button className="px-5 py-2.5 rounded-full bg-black text-white text-base cursor-pointer transition-colors duration-300 hover:bg-red-500">Notify Me</button>
+         <button className="px-5 py-2.5 rounded-full bg-gray-500 text-white text-base cursor-pointer transition-colors duration-300">Shop Air Max</button>
          </div> 
         </div>
 
         
         <ProductGrid />
 
-        <div className="featured">
+        <div className="text-center w-screen">
         <div>
         <h1 className="font-semibold text-xl py-5 text-left ml-7">Featured</h1>
       </div>
-      <div className="Featuredimg"><img src="/Featured.png" alt="Heroimg" /></div>
+      <div className="flex justify-center items-center"><img src="/Featured.png" alt="Heroimg" /></div>
       <div className="flex justify-center items-center flex-col gap-3 p-10 text-center">
         <h2 className=" text-4xl font-bold uppercase"> STEP INTO WHAT FEELS GOOD</h2>
         <p className="text-sm leading-5 w-[60%] pt-3 pb-2 text-center">

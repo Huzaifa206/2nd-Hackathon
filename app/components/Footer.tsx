@@ -1,48 +1,48 @@
 export default function Footer() {
     return (
-     <footer className="unique-footer">
-        <div className="unique-footer-container">
+     <footer className="w-screen bg-black text-white p-10 text-sm font-sans">
+        <div className="flex justify-between mb-5">
       
-      <div className="unique-footer-column">
-        <p>Find a Store</p>
-        <p>Become a Member</p>
-        <p>Sign Up for Email</p>
-        <p>Send Us Feedback</p>
-        <p>Student Discounts</p>
+      <div className="flex-1 mr-5">
+        <p className="my-1">Find a Store</p>
+        <p className="my-1">Become a Member</p>
+        <p className="my-1">Sign Up for Email</p>
+        <p className="my-1">Send Us Feedback</p>
+        <p className="my-1">Student Discounts</p>
       </div>
 
       
-      <div className="unique-footer-column">
-        <p className="unique-footer-heading">Get Help</p>
-        <ul>
-          <li>Order Status</li>
-          <li>Delivery</li>
-          <li>Returns</li>
-          <li>Payment Options</li>
-          <li>Contact Us</li>
+      <div className="flex-1 mr-5">
+        <p className="font-bold mb-2.5">Get Help</p>
+        <ul className="list-none p-0">
+          <li className="my-1">Order Status</li>
+          <li className="my-1">Delivery</li>
+          <li className="my-1">Returns</li>
+          <li className="my-1">Payment Options</li>
+          <li className="my-1">Contact Us</li>
         </ul>
       </div>
 
      
-      <div className="unique-footer-column">
-        <p className="unique-footer-heading">About Nike</p>
-        <ul>
-          <li>News</li>
-          <li>Careers</li>
-          <li>Investors</li>
-          <li>Sustainability</li>
+      <div className="flex-1 mr-5">
+        <p className="font-bold mb-2.5">About Nike</p>
+        <ul className="list-none p-0">
+          <li className="my-1">News</li>
+          <li className="my-1">Careers</li>
+          <li className="my-1">Investors</li>
+          <li className="my-1">Sustainability</li>
         </ul>
       </div>
     </div>
 
    
-    <div className="unique-footer-bottom">
+    <div className="flex justify-between items-center border-t border-gray-700 pt-5">
       <p>© 2023 Nike, Inc. All Rights Reserved</p>
-      <ul className="unique-footer-links">
-        <li>Guides</li>
-        <li>Terms of Sale</li>
-        <li>Terms of Use</li>
-        <li>Privacy Policy</li>
+      <ul className="flex list-none p-0">
+        <li className="ml-5 cursor-pointer hover:underline">Guides</li>
+        <li className="ml-5 cursor-pointer hover:underline">Terms of Sale</li>
+        <li className="ml-5 cursor-pointer hover:underline">Terms of Use</li>
+        <li className="ml-5 cursor-pointer hover:underline">Privacy Policy</li>
       </ul>
     </div>
   </footer>

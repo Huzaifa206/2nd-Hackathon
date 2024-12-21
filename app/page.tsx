@@ -4,6 +4,7 @@ import Header from './components/Header';
 import ProductGrid from './components/ProductGrid';
 import TopHeader from "./components/TopHeader";
 import Footer from "./components/Footer";
+import Essential from "./components/Essentials";
 
 export default function Home() {
   return (
@@ -42,7 +43,7 @@ export default function Home() {
         <button>Find Your Shoe</button>
       </div>
        </div>
-        
+        <Essential/>
         <Footer />
       </main>
     </div>

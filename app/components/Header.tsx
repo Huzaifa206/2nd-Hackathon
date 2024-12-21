@@ -32,9 +32,9 @@ export default function Header() {
         </nav>
   
         <div className="flex items-center justify-between gap-4">
-          <div className="flex rounded-3xl px-2 w-[80%] border-2 border-text-secondary-gray gap-2">
+          <div className="flex rounded-3xl px-2 py-1 w-[80%] border-2 border-text-secondary-gray gap-2 bg-gray-100">
              <img src="/search.svg" alt="wishlist" />
-             <input className="focus-visible:outline-none w-[64%]" type="text" placeholder="Search" />
+             <input className="focus-visible:outline-none w-[64%] bg-gray-100" type="text" placeholder="Search" />
           </div>
           <div className="wishlist"><img src="/wishlist.svg" alt="wishlist" /></div>
           <div className="cart"><img src="/cart.svg" alt="cart" /></div>

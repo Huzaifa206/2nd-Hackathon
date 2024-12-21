@@ -12,9 +12,9 @@ export default function ContactUs() {
             <Header />
         <div className='flex flex-col items-center'>
         <h2 className='uppercase text-xl font-bold mt-8'>Get Help</h2>
-        <div className="flex px-4 py-3 rounded-md w-[30%] border-2 border-text-secondary-gray mt-4 justify-between">
-            <input className="focus-visible:outline-none w-[64%]" type="text" placeholder="What can we help you with?" name="" id="" />
-            <Image src="/search.svg" alt="wishlist" width={40} height={40}/>
+        <div className="flex px-4 py-3 rounded-md w-[30%] border-2 border-text-secondary-gray mt-4 justify-between mb-3">
+            <input className="focus-visible:outline-none w-[64%] bg-gray-100 " type="text" placeholder="What can we help you with?" name="" id="" />
+            <Image src="/search.svg" alt="wishlist" width={20} height={40}/>
         </div>
         <div className="grid grid-cols-12 px-8 md:px-16 py-8 bg-white text-gray-800">
             <div className='col-span-9 border-r-[1.3px] pr-4 border-text-secondary-gray'>
@@ -24,7 +24,7 @@ export default function ContactUs() {
                 <p className="mb-4">
                 We want to make buying your favourite Nike shoes and gear online fast and easy, and we accept the following payment options:
                 </p>
-                <ul className="list-disc pl-5 mb-6 space-y-2">
+                <ul className=" pl-5 mb-6 space-y-2">
                 <li>Visa, Mastercard, Diners Club, Discover, American Express, Visa Electron, Maestro</li>
                 <li>
                     If you enter your PAN information at checkout, you'll be able to pay for your order with PayTM or a local credit or debit card.

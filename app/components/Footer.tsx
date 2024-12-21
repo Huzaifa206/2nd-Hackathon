@@ -3,7 +3,7 @@ export default function Footer() {
      <footer className="w-screen bg-black text-white p-10 text-sm font-sans">
         <div className="flex justify-between mb-5">
       
-      <div className="flex-1 mr-5">
+      <div className="flex-1 mx-5">
         <p className="my-1">Find a Store</p>
         <p className="my-1">Become a Member</p>
         <p className="my-1">Sign Up for Email</p>

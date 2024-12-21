@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Header() {
     return (
-      <header className="w-screen flex justify-between items-center p-[10px_30px] bg-white shadow-md">
+      <header className="w-screen flex justify-between items-center p-[10px_40px] bg-white shadow-md">
         <div className="bg-cover w-[7%]"><img src="/logonike.png" alt="Nike" /></div>
         <nav>
           <ul className="flex list-none gap-5">
@@ -31,9 +31,13 @@ export default function Header() {
           </ul>
         </nav>
   
-        <div className="flex items-center justify-between gap-3">
-         <div className="wishlist"><img src="/wishlist.svg" alt="wishlist" /></div>
-         <div className="cart"><img src="/cart.svg" alt="cart" /></div>
+        <div className="flex items-center justify-between gap-4">
+          <div className="flex rounded-3xl px-2 w-[80%] border-2 border-text-secondary-gray gap-2">
+             <img src="/search.svg" alt="wishlist" />
+             <input className="focus-visible:outline-none w-[64%]" type="text" placeholder="Search" />
+          </div>
+          <div className="wishlist"><img src="/wishlist.svg" alt="wishlist" /></div>
+          <div className="cart"><img src="/cart.svg" alt="cart" /></div>
         </div>
         
       </header>

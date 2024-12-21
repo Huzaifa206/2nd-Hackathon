@@ -8,7 +8,7 @@ export default function ProductGrid() {
     return (
       <div>
         <div><h1 className="font-semibold text-xl text-left ml-7 mt-7">Best of Air Max</h1></div>
-        <section className="w-screen flex gap-5 justify-evenly my-[10px_0]">
+        <section className="w-screen flex gap-5 justify-evenly mt-[10px]">
         {products.map((product, index) => (
           <div key={index} className="bg-white p-3.5 rounded-lg text-center shadow-md">
             <img src={product.image} className="max-w-full h-auto mb-2.5" alt={product.name} />

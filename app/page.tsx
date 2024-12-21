@@ -12,10 +12,10 @@ export default function Home() {
       <Header />
       <main>
        <div className="flex flex-col justify-center items-center text-center p-5 gap-2.5 w-screen">
-         <div className="flex justify-center items-center mx-auto w-[80%]">
-           <img src="/Image.png" alt="Air Max Pulse" />
+         <div className="flex justify-center items-center mx-auto w-[80%] ">
+           <img src="/Image.png" className="rounded-xl" alt="Air Max Pulse" />
           </div>
-         <h1 className="text-2xl my-[15px_0]">NIKE AIR MAX PULSE</h1>
+         <h1 className="text-3xl mt-3 font-bold">NIKE AIR MAX PULSE</h1>
          <p className="text-base mb-5 leading-[1.5]">
           Extreme comfort. Hyper durable. Max volume. Introducing the Air Max Pulse—designed to push you past your limits and help u go to the max.
          </p>

@@ -1,8 +1,8 @@
 export default function ProductGrid() {
     const products = [
-      { name: 'Nike Air Max Pulse', price: '$10,000', image: '/10.jpeg' },
-      { name: 'Nike Air Max 97 SE', price: '$20,000', image: '/11.jpeg' },
-      { name: 'Nike Air Max Pulse', price: '$30,000', image: '/12.jpeg' },
+      { name:"Nike Air Max Pulse",price:"$10,000",image:"/10.jpeg"},
+      { name:"Nike Air Max 97 SE",price:"$20,000",image:"/11.jpeg"},
+      { name:"Nike Air Max Pulse",price:"$30,000",image:"/12.jpeg"},
     ];
   
     return (

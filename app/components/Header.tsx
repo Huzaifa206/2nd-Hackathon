@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Header() {
     return (
-      <header className="w-[100vw] flex justify-between items-center p-[10px_40px] bg-white shadow-md">
+      <header className="w-screen flex justify-between items-center p-[10px_40px] bg-white shadow-md">
         <div className="bg-cover w-[7%]"><img src="/logonike.png" alt="Nike" /></div>
         <nav>
           <ul className="flex list-none gap-5">

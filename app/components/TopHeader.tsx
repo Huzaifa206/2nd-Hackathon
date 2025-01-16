@@ -7,7 +7,7 @@ export default function TopHeader() {
         <img src="/logo1nike.png" alt="Nike" />
       </div>
       <nav>
-        <ul className="flex list-none gap-5">
+        <ul className="flex list-none gap-5 ">
           <li className="cursor-pointer transition-colors duration-300 text-sm font-bold hover:text-red-500">
             <Link href="/contact-us">Find A Store</Link>
           </li>

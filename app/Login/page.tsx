@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Login() {
     return (
-        <div>
+        <div className="w-screen">
             <TopHeader />
             <Header />
         <div className="flex flex-col items-center py-10">

@@ -32,11 +32,11 @@ export default function Login() {
           </div>
           <p className="text-text-secondary-gray text-center pb-6">By logging in, you agree to Nike's <span> Privacy Policy</span> and <span>Terms of Use</span>.
          </p>
-          <button className="rounded-sm py-3 bg-black mb-4 px-4 text-white text-center">Sign in</button> 
+          <button className="rounded-sm py-3 bg-black mb-4 px-4 text-white text-center  hover:bg-slate-700">Sign in</button> 
           <p className="text-center"> <span className="text-text-secondary-gray">Not a Member? </span></p>
         
         </form>
-      <Link href="/Join-us" className="flex items-center justify-center font-bold mb-[2%] underline" >Join us</Link>
+      <Link href="/Join-us" className="flex items-center justify-center font-bold mb-[2%] underline cursor-pointer transition-colors duration-300 hover:text-red-500" >Join us</Link>
       </div>
       
       <Footer />

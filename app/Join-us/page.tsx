@@ -40,8 +40,8 @@ export default function JoinUs() {
         </div>
       </div>
       <p className="text-text-secondary-gray text-center pb-6">By creating an account, you agree to Nike's Privacy Policy and Terms of Use.</p>
-      <button className="rounded-sm py-3 bg-black text-white mb-2">Sign Up</button>
-      <p className="text-center"> <span className="text-text-secondary-gray">Already a Member? </span><span className="underline">Join Us.</span></p>
+      <button className="rounded-sm py-3 bg-black text-white mb-2 hover:bg-slate-700">Sign Up</button>
+      <p className="text-center"> <span className="text-text-secondary-gray">Already a Member? </span><Link href="/Login" className="flex justify-center font-bold cursor-pointer transition-colors duration-300 hover:text-red-500 underline" >Sign In</Link></p>
     </form>
     </div>
     <Footer />

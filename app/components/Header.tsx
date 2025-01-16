@@ -36,8 +36,8 @@ export default function Header() {
              <img src="/search.svg" alt="wishlist" />
              <input className="hidden md:block focus-visible:outline-none w-[64%] bg-gray-100" type="text" placeholder="Search" />
           </div>
-          <div className="wishlist"><Image src={"/wishlist.svg"} width={800} height={60} alt="" layout="responsive" /></div>
-          <div className="cart"><Image src={"/cart.svg"} width={800} height={600} alt="" layout="responsive" /></div>
+          <div className="w-8"><Image src={"/wishlist.svg"} width={800} height={60} alt="" layout="responsive" /></div>
+          <div className="w-8"><Image src={"/cart.svg"} width={800} height={600} alt="" layout="responsive" /></div>
         </div>
         
       </header>

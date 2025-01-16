@@ -5,16 +5,19 @@ import ProductGrid from './components/ProductGrid';
 import TopHeader from "./components/TopHeader";
 import Footer from "./components/Footer";
 import Essential from "./components/Essentials";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <div className="w-screen">
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" /></Head>
       <TopHeader />
       <Header />
       <main>
        <div className="flex flex-col justify-center items-center text-center gap-2.5 w-screen">
          <div className="flex justify-center items-center mx-auto max-w-[80%] mt-5">
-          <Image src={"/Image.png"} width={800} height={600} className="rounded-xl" alt="Air Max Pulse"layout="responsive" />
+          <Image src={"/Image.png"} width={800} height={600} className="rounded-xl" alt="Air Max Pulse" layout="responsive" />
           </div>
          <h1 className="text-3xl mt-3 font-bold">NIKE AIR MAX PULSE</h1>
          <p className="text-base mb-5 leading-[1.5]">

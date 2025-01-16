@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function TopHeader() {
   return (
-    <div className="w-screen h-[35px] flex justify-between items-center p-[10px_30px] bg-gray-100 shadow-md">
+    <div className="hidden w-screen h-[35px] md:flex justify-between items-center p-[10px_30px] bg-gray-100 shadow-md">
       <div className="bg-cover w-[3%]">
         <img src="/logo1nike.png" alt="Nike" />
       </div>

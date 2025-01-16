@@ -8,13 +8,13 @@ import Essential from "./components/Essentials";
 
 export default function Home() {
   return (
-    <div className="container">
+    <div className="w-screen">
       <TopHeader />
       <Header />
       <main>
-       <div className="flex flex-col justify-center items-center text-center p-5 gap-2.5 w-screen">
-         <div className="flex justify-center items-center mx-auto w-[80%] ">
-          <Image src={"/Image.png"} width={1000} height={800} className="rounded-xl" alt="Air Max Pulse"layout="responsive" />
+       <div className="flex flex-col justify-center items-center text-center gap-2.5 w-screen">
+         <div className="flex justify-center items-center mx-auto max-w-[80%] mt-5">
+          <Image src={"/Image.png"} width={800} height={600} className="rounded-xl" alt="Air Max Pulse"layout="responsive" />
           </div>
          <h1 className="text-3xl mt-3 font-bold">NIKE AIR MAX PULSE</h1>
          <p className="text-base mb-5 leading-[1.5]">

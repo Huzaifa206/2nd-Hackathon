@@ -32,12 +32,13 @@ export default function Header() {
         
   
         <div className="flex items-center justify-between gap-4">
-          <div className="flex rounded-3xl px-2 py-1 w-[80%] border-2 border-text-secondary-gray gap-2 bg-gray-100">
-             <img src="/search.svg" alt="wishlist" />
-             <input className="hidden md:block focus-visible:outline-none w-[64%] bg-gray-100" type="text" placeholder="Search" />
+          <div className="hidden md:flex rounded-3xl px-2 py-1 w-[80%] border-2 border-text-secondary-gray gap-2 bg-gray-100">
+             <img src="/search.svg" alt="" />
+             <input className="block focus-visible:outline-none w-[64%] bg-gray-100" type="text" placeholder="Search" />
           </div>
-          <div className="w-8"><Image src={"/wishlist.svg"} width={800} height={60} alt="" layout="responsive" /></div>
-          <div className="w-8"><Image src={"/cart.svg"} width={800} height={600} alt="" layout="responsive" /></div>
+          <div className="w-5 md:hidden"><Image src={"/search.svg"} width={800} height={600} alt="" layout="responsive" /></div>
+          <div className="w-6"><Image src={"/wishlist.svg"} width={800} height={600} alt="" layout="responsive" /></div>
+          <div className="w-5"><Image src={"/cart.svg"} width={800} height={600} alt="" layout="responsive" /></div>
         </div>
         
       </header>

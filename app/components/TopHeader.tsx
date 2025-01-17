@@ -4,7 +4,7 @@ export default function TopHeader() {
   return (
     <div className="hidden w-screen h-[35px] md:flex justify-between items-center p-[10px_30px] bg-gray-100 shadow-md">
       <div className="bg-cover w-[3%]">
-        <img src="/logo1nike.png" alt="Nike" />
+        <img src="/logo1.png" alt="Nike" />
       </div>
       <nav>
         <ul className="flex list-none gap-5 ">

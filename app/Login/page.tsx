@@ -10,7 +10,7 @@ export default function Login() {
             <TopHeader />
             <Header />
         <div className="flex flex-col items-center py-10">
-        <Image className="pb-5" src="/logonike.png" width={40} height={10} alt="Logo" />
+        <Image className="pb-5" src="/TickLogo.png" width={40} height={10} alt="Logo" />
         <h2 className="uppercase w-40 text-center font-bold pb-5">
           YOUR ACCOUNT FOR EVERYTHING NIKE
         </h2>

@@ -10,7 +10,7 @@ export default function JoinUs() {
             <TopHeader />
             <Header />
           <div className="flex flex-col items-center py-10">
-           <Image className="pb-5" src="/logonike.png" width={40} height={10} alt="Logo" />
+           <Image className="pb-5" src="/TickLogo.png" width={40} height={10} alt="Logo" />
            <h2 className="uppercase text-center font-bold pb-5"> BECOME A NIKE MEMBER </h2>
            <p className='w-80 text-center text-text-secondary-gray pb-5'>Create your Nike Member profile and get first access to the very best of Nike products, inspiration and community.</p>
            <form action="" className="flex flex-col w-96">

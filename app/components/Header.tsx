@@ -4,7 +4,9 @@ import Image from "next/image";
 export default function Header() {
     return (
       <header className="w-screen flex justify-between items-center py-3 pl-5 pr-8 bg-white shadow-md">
-        <div className="bg-cover w-[85px] md:w-[7%]"><img src="/logonike.png" alt="Nike" /></div>
+        <div className="bg-cover w-[85px] md:w-[7%]">
+          <img src="TickLogo.png" alt="Nike" />
+          </div>
         
         <ul className="hidden md:flex list-none gap-5">
             <li className="cursor-pointer transition-colors duration-300 hover:text-red-500">

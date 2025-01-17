@@ -16,8 +16,8 @@ export default function Home() {
       <Header />
       <main>
        <div className="flex flex-col justify-center items-center text-center gap-2.5 w-screen">
-         <div className="flex justify-center items-center mx-auto max-w-[80%] mt-5">
-          <Image src={"/Image.png"} width={800} height={600} className="rounded-xl" alt="Air Max Pulse" layout="responsive" />
+         <div className="flex justify-center items-center mx-auto w-[90%] mt-5">
+          <Image src={"/Image.png"} width={1200} height={1000} className="rounded-xl" alt="Air Max Pulse" layout="responsive" />
           </div>
          <h1 className="text-3xl mt-3 font-bold">NIKE AIR MAX PULSE</h1>
          <p className="text-base mb-5 leading-[1.5]">

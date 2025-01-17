@@ -1,14 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FiSearch } from "react-icons/fi";
-import { FaRegHeart } from "react-icons/fa6";
+import { FiHeart } from "react-icons/fi";
 import { IoBagOutline } from "react-icons/io5";
 import { IoMenu } from "react-icons/io5";
 
 export default function Header() {
     return (
-      <header className="w-screen flex justify-between items-center py-3 px-12 bg-white shadow-md">
-        <div className="bg-cover w-[85px] md:w-[5%] mx-10">
+      <header className="w-screen flex justify-between items-center py-3 px-7 md:px-12 bg-white shadow-md">
+        <div className="bg-cover w-[85px] md:w-[5%] mx-2 md:mx-10">
           <img src="TickLogo.png" alt="Nike" />
           </div>
         
@@ -35,8 +35,7 @@ export default function Header() {
               <Link href="/">SNKRS</Link>
             </li>
         </ul>
-        
-  
+      
         {/* <div className="flex items-center justify-start gap-4">
           <div className="hidden md:flex rounded-3xl px-2 py-1.5 w-[65%] border-2 border-text-secondary-gray gap-2 bg-gray-100">
              <img src="/search.svg" alt="" />
@@ -53,7 +52,7 @@ export default function Header() {
              <input className="block focus-visible:outline-none w-[64%] bg-gray-100 " type="text" placeholder="Search" />
           </div>
           <div className="md:hidden"><FiSearch className="flex justify-center items-center size-6 " /></div>
-          <div ><FaRegHeart className="flex justify-center items-center size-6 " /></div>
+          <div ><FiHeart className="flex justify-center items-center size-6 " /></div>
           <div ><IoBagOutline style={{stroke:"black", strokeWidth:"20"}} className="flex justify-center items-center size-6 " /></div>
           <div className="md:hidden"><IoMenu className="flex justify-center items-center size-6 " /></div>
         </div>

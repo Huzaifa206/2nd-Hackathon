@@ -8,7 +8,7 @@ import { IoMenu } from "react-icons/io5";
 export default function Header() {
     return (
       <header className="w-screen flex justify-between items-center py-3 px-7 md:px-12 bg-white shadow-md">
-        <div className="bg-cover w-[15%] md:w-[5%] mx-2 md:mx-10">
+        <div className="bg-cover w-[20%] md:w-[5%] mx-2 md:mx-10">
           <img src="TickLogo.png" alt="Nike" />
           </div>
         

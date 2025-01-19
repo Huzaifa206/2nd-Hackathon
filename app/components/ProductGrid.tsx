@@ -63,8 +63,10 @@ const ProductGrid: React.FC = () => {
   return (
     <div className="relative">
       <div className="flex justify-between items-center px-5 md:px-7">
-        <h1 className="font-semibold text-xl ml-7 mt-7">Best of Air Max</h1>
-        <div className="space-x-2 mr-7 mt-7">
+        <h1 className="flex items-center font-semibold text-xl ml-7 mt-7">Best of Air Max</h1>
+        <div className="flex justify-evenly items-center gap-2 mr-7 mt-7">
+        <button className="font-semibold text-xl p-2 cursor-pointer hover:text-red-500">Shop Now</button>
+        <div className="flex justify-evenly items-center gap-2 ml-1 mr-2" >
           <button
             onClick={scrollLeft}
             className="bg-gray-200 p-2 rounded-full shadow-md hover:bg-gray-300"
@@ -74,6 +76,7 @@ const ProductGrid: React.FC = () => {
           <button onClick={scrollRight} className="bg-gray-200 p-2 rounded-full shadow-md hover:bg-gray-300">
            <MdKeyboardArrowRight className="size-5" />
           </button>
+          </div>
         </div>
       </div>
       <div

@@ -81,7 +81,7 @@ const ProductGrid: React.FC = () => {
       </div>
       <div
         ref={sliderRef}
-        className="flex gap-5 md:overflow-x-hidden scroll-smooth mt-5 px-7 md:px-14">
+        className="flex gap-5 overflow-x-hidden scroll-smooth mt-5 px-7 md:px-14">
         {products.map((product, index) => (
           <div
             key={index}

@@ -14,6 +14,9 @@ export default function Home() {
       <ProductGrid />
       <Featured/>
       <Essential/>
+
+
+      
     </div>
   );
 }

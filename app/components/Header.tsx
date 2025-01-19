@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import { FiSearch } from "react-icons/fi";
@@ -55,7 +56,10 @@ export default function Header() {
           <div ><FiHeart className="flex justify-center items-center size-6 cursor-pointer transition-colors duration-300 hover:text-red-500" /></div>
           <div ><IoBagOutline style={{strokeWidth:"200"}} className="flex justify-center items-center size-6 cursor-pointer transition-colors duration-300 hover:text-red-500" /></div>
           <div className="md:hidden"><IoMenu className="flex justify-center items-center size-6 cursor-pointer transition-colors duration-300 hover:text-red-500" /></div>
-        </div>
+ 
+
+ 
+ </div>
         
       </header>
     );

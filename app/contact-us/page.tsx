@@ -1,15 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Footer from '../components/Footer';
-import TopHeader from '../components/TopHeader';
-import Header from '../components/Header';
-
 
 export default function ContactUs() {
     return (
-        <div>
-            <TopHeader />
-            <Header />
         <div className='flex flex-col items-center'>
         <h2 className='uppercase text-xl font-bold mt-8'>Get Help</h2>
         <div className="flex px-4 py-3 rounded-md w-[30%] border-2 border-text-secondary-gray mt-4 justify-between mb-3">
@@ -125,8 +118,6 @@ export default function ContactUs() {
                 </div>
             </div>
         </div>
-    </div>
-    <Footer />
     </div>
     );
   }

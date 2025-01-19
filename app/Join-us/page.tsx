@@ -1,15 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import Header from "../components/Header";
-import TopHeader from "../components/TopHeader";
-import Footer from "../components/Footer";
 
 export default function JoinUs() {
     return (
-        <div>
-            <TopHeader />
-            <Header />
-          <div className="flex flex-col items-center py-10">
+    <div className="flex flex-col items-center py-10">
            <Image className="pb-5" src="/TickLogo.png" width={40} height={10} alt="Logo" />
            <h2 className="uppercase text-center font-bold pb-5"> BECOME A NIKE MEMBER </h2>
            <p className='w-80 text-center text-text-secondary-gray pb-5'>Create your Nike Member profile and get first access to the very best of Nike products, inspiration and community.</p>
@@ -44,8 +38,6 @@ export default function JoinUs() {
       <p className="text-center"> <span className="text-text-secondary-gray">Already a Member? </span><Link href="/Login" className="flex justify-center font-bold cursor-pointer transition-colors duration-300 hover:text-red-500 underline" >Sign In</Link></p>
     </form>
     </div>
-    <Footer />
-  </div>
     );
   }
   

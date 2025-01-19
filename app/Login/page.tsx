@@ -1,14 +1,8 @@
 import Image from "next/image";
-import Header from "../components/Header";
-import TopHeader from "../components/TopHeader";
-import Footer from "../components/Footer";
 import Link from "next/link";
 
 export default function Login() {
     return (
-        <div className="w-screen">
-            <TopHeader />
-            <Header />
         <div className="flex flex-col items-center py-10">
         <Image className="pb-5" src="/TickLogo.png" width={40} height={10} alt="Logo" />
         <h2 className="uppercase w-40 text-center font-bold pb-5">
@@ -37,9 +31,6 @@ export default function Login() {
         
         </form>
       <Link href="/Join-us" className="flex items-center justify-center font-bold mb-[2%] underline cursor-pointer transition-colors duration-300 hover:text-red-500" >Join us</Link>
-      </div>
-      
-      <Footer />
       </div>
     );
   }

@@ -51,10 +51,10 @@ export default function Header() {
             <FiSearch className="flex justify-center items-center size-6 " />
              <input className="block focus-visible:outline-none w-[64%] bg-gray-100 " type="text" placeholder="Search" />
           </div>
-          <div className="md:hidden"><FiSearch className="flex justify-center items-center size-6 " /></div>
-          <div ><FiHeart className="flex justify-center items-center size-6 " /></div>
-          <div ><IoBagOutline style={{stroke:"black", strokeWidth:"20"}} className="flex justify-center items-center size-6 " /></div>
-          <div className="md:hidden"><IoMenu className="flex justify-center items-center size-6 " /></div>
+          <div className="md:hidden"><FiSearch className="flex justify-center items-center size-6 cursor-pointer transition-colors duration-300 hover:text-red-500" /></div>
+          <div ><FiHeart className="flex justify-center items-center size-6 cursor-pointer transition-colors duration-300 hover:text-red-500" /></div>
+          <div ><IoBagOutline style={{strokeWidth:"200"}} className="flex justify-center items-center size-6 cursor-pointer transition-colors duration-300 hover:text-red-500" /></div>
+          <div className="md:hidden"><IoMenu className="flex justify-center items-center size-6 cursor-pointer transition-colors duration-300 hover:text-red-500" /></div>
         </div>
         
       </header>

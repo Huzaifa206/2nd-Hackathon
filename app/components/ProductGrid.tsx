@@ -62,7 +62,7 @@ const ProductGrid: React.FC = () => {
 
   return (
     <div className="relative">
-      <div className="flex justify-between items-center px-7">
+      <div className="flex justify-between items-center px-5 md:px-7">
         <h1 className="font-semibold text-xl ml-7 mt-7">Best of Air Max</h1>
         <div className="space-x-2 mr-7 mt-7">
           <button
@@ -78,11 +78,11 @@ const ProductGrid: React.FC = () => {
       </div>
       <div
         ref={sliderRef}
-        className="flex gap-5 overflow-x-hidden scroll-smooth mt-5 px-14">
+        className="flex gap-5 md:overflow-x-hidden scroll-smooth mt-5 px-7 md:px-14">
         {products.map((product, index) => (
           <div
             key={index}
-            className="bg-white p-3.5 rounded-lg text-center shadow-md min-w-[80%] md:min-w-[30%]">
+            className="bg-white p-3.5 rounded-lg text-center shadow-md min-w-[90%] md:min-w-[30%]">
             <img
               src={product.image}
               className="max-w-full min-w-full h-auto mb-2.5"

@@ -90,7 +90,7 @@ const AllProductGrid = () => {
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-48 object-cover rounded-md mb-4"
+                className="w-full h-auto object-cover rounded-md mb-4"
               />
               <h3 className="font-semibold text-lg">{product.name}</h3>
               <p className="text-gray-500">{product.price}</p>

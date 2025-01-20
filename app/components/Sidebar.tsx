@@ -21,7 +21,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
            <div className="md:hidden "><IoMenu className="flex justify-center items-center size-6 cursor-pointer transition-colors duration-300 hover:text-red-500" /></div>
         </button>
         <div
-          className={`z-50 fixed top-0 right-0 h-screen w-64 bg-green-600 transform transition-transform ${
+          className={`z-50 fixed top-0 right-0 h-screen w-64 bg-gray-900 text-white transform transition-transform ${
             isSidebarOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >

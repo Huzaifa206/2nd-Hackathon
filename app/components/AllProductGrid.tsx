@@ -81,11 +81,11 @@ const AllProductGrid = () => {
         </div>
 
         {/* Main Content */}
-        <section className="grid grid-cols-2 lg:grid-cols-4 gap-6 p-7 w-full">
+        <section className="grid grid-cols-2 lg:grid-cols-4 gap-1 p-1 w-full">
           {products.map((product, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md p-4 text-center"
+              className="bg-white rounded-lg shadow-md p-1 text-center"
             >
               <img
                 src={product.image}

@@ -5,6 +5,7 @@ import { FiSearch } from "react-icons/fi";
 import { FiHeart } from "react-icons/fi";
 import { IoBagOutline } from "react-icons/io5";
 import { IoMenu } from "react-icons/io5";
+import Sidebar from "./Sidebar";
 
 export default function Header() {
     return (
@@ -55,7 +56,17 @@ export default function Header() {
           <div className="md:hidden"><FiSearch className="flex justify-center items-center size-6 cursor-pointer transition-colors duration-300 hover:text-red-500" /></div>
           <div ><FiHeart className="flex justify-center items-center size-6 cursor-pointer transition-colors duration-300 hover:text-red-500" /></div>
           <div ><IoBagOutline style={{strokeWidth:"200"}} className="flex justify-center items-center size-6 cursor-pointer transition-colors duration-300 hover:text-red-500" /></div>
-          <div className="md:hidden"><IoMenu className="flex justify-center items-center size-6 cursor-pointer transition-colors duration-300 hover:text-red-500" /></div>
+          <div className="md:hidden ">
+          <Sidebar> 
+          {/* Sidebar content */}
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </Sidebar>
+</div>
+          
  
 
  

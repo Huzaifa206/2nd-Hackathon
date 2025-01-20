@@ -39,15 +39,16 @@ const AllProductGrid = () => {
   ];
 
   return (
-    <div>
-      <div className="flex items-center justify-between px-7 mt-7">
+    <div className='bg-white border-t-2 border-gray-300'>
+      <div className="flex items-center justify-between px-7 pt-7">
         <h1 className="font-semibold text-xl text-left">Best of Air Max</h1>
         {/* Button to toggle sidebar */}
         <button
           onClick={toggleSidebar}
-          className="bg-blue-500 text-white px-4 py-2 rounded-md md:hidden"
+          className="font-semibold px-4 py-2 rounded-md md:hidden"
         >
           Categories
+
         </button>
       </div>
 
@@ -55,7 +56,7 @@ const AllProductGrid = () => {
         {/* Sidebar */}
         <div
           ref={sidebarRef}
-          className={`fixed inset-0 bg-green-300 p-4 overflow-y-auto transform transition-transform duration-300 z-10 ${
+          className={`fixed inset-0 bg-gray-100 p-4 overflow-y-scroll transform transition-transform duration-300 z-10 ${
             isSidebarVisible ? 'translate-x-0' : '-translate-x-full'
           } md:static md:translate-x-0 w-[40%] md:w-[20%] md:flex md:flex-col`}
         >
@@ -81,11 +82,11 @@ const AllProductGrid = () => {
         </div>
 
         {/* Main Content */}
-        <section className="grid grid-cols-2 lg:grid-cols-4 gap-1 p-1 w-full">
+        <section className="grid grid-cols-2 lg:grid-cols-4 gap-1 p-1 md:p-5 w-full ">
           {products.map((product, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md p-1 text-center"
+              className="bg-white rounded-lg  p-1 text-center"
             >
               <img
                 src={product.image}

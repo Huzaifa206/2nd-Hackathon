@@ -7,9 +7,7 @@ import Featured from "./components/Featured";
 export default function Home() {
   return (
     <div className="w-screen">
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+      
       <Hero/>
       <ProductGrid />
       <Featured/>

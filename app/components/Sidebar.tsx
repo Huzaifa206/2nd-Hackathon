@@ -60,37 +60,47 @@ export default function Sidebar() {
           </span>
         </p>
 
-        <div className="flex space-x-4">
-          {/* Join Us Button */}
+        <div className="flex justify-evenly space-x-4">
+        
+          <Link href="/Join-us">
           <button onClick={toggleSidebar!} className="flex-1 py-2 px-4 rounded-full bg-white text-black font-medium hover:bg-gray-200 transition duration-200">
-            <Link href="/Join-us">Join Us</Link>
+            Join Us
           </button>
-          {/* Sign In Button */}
+          </Link>
+        
+          <Link href="/Login">
           <button onClick={toggleSidebar!} className="flex-1 py-2 px-4 rounded-full border border-white text-white font-medium hover:bg-gray-500 transition duration-200">
-          <Link href="/Login">Sign In</Link>
+          Sign In
           </button>
+          </Link>
         </div>
       </div>
 
       {/* Navigation Links */}
       <div className="space-y-2">
-        <button className="flex items-center space-x-4 w-full py-2 text-left hover:bg-gray-600 rounded-md transition duration-200">
+        <Link href="/">
+        <button onClick={toggleSidebar!} className="flex items-center space-x-4 w-full py-2 text-left hover:bg-gray-600 rounded-md transition duration-200">
           <span className="text-lg"><FaHome /></span>
-          <Link onClick={toggleSidebar!} href="/"><span className="font-medium">Home</span></Link>
+          <span className="font-medium">Home</span>
         </button>
-        <button className="flex items-center space-x-4 w-full py-2 text-left hover:bg-gray-600 rounded-md transition duration-200">
+        </Link>
+
+        <Link href="/AllProducts">
+        <button onClick={toggleSidebar!} className="flex items-center space-x-4 w-full py-2 text-left hover:bg-gray-600 rounded-md transition duration-200">
           <span className="text-lg"><AiFillProduct /></span>
-          <Link onClick={toggleSidebar!} href="/AllProducts"><span className="font-medium">Products</span></Link>
+          <span className="font-medium">Products</span>
         </button>
-        <button className="flex items-center space-x-4 w-full py-2 text-left hover:bg-gray-600 rounded-md transition duration-200">
+        </Link>
+
+        <Link href="/contact-us">
+        <button onClick={toggleSidebar!} className="flex items-center space-x-4 w-full py-2 text-left hover:bg-gray-600 rounded-md transition duration-200">
           <span className="text-lg"><IoHelp /></span>
-          <Link onClick={toggleSidebar!} href="/contact-us"><span className="font-medium">Help</span></Link>
+          <span className="font-medium">Help</span>
         </button>
+        </Link>
         
       </div>
     </div>
-
-
 
         </div>
       </div>

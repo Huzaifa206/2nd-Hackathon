@@ -41,7 +41,7 @@ const AllProductGrid = () => {
   return (
     <div className='bg-white border-t-2 border-gray-300'>
       <div className="flex items-center justify-between px-7 pt-7">
-        <h1 className="font-semibold text-xl text-left">Best of Air Max</h1>
+        <h1 className="font-semibold text-xl text-left">New(100)</h1>
         {/* Button to toggle sidebar */}
         <button
           onClick={toggleSidebar}
@@ -56,29 +56,108 @@ const AllProductGrid = () => {
         {/* Sidebar */}
         <div
           ref={sidebarRef}
-          className={`fixed inset-0 bg-gray-100 p-4 overflow-y-scroll transform transition-transform duration-300 z-10 ${
+          className={`fixed inset-0 p-4 pl-10 overflow-y-scroll transform transition-transform duration-300 z-10 ${
             isSidebarVisible ? 'translate-x-0' : '-translate-x-full'
           } md:static md:translate-x-0 w-[40%] md:w-[20%] md:flex md:flex-col`}
         >
-          <h2 className="text-lg font-semibold mb-4">Categories</h2>
-          <ul>
-            <li className="mb-2">
-              <a href="#" className="text-gray-700 hover:text-blue-500">
-                Shoes
-              </a>
-            </li>
-            <li className="mb-2">
-              <a href="#" className="text-gray-700 hover:text-blue-500">
-                Tops & T-Shirts
-              </a>
-            </li>
-            <li className="mb-2">
-              <a href="#" className="text-gray-700 hover:text-blue-500">
-                Jackets
-              </a>
-            </li>
-            {/* Add more categories here */}
-          </ul>
+        <ul className=" font-[550] space-y-2 ">
+          <li className="cursor-pointer transition-colors duration-300 hover:text-red-500">Shoes</li>
+          <li className="cursor-pointer transition-colors duration-300 hover:text-red-500">Sports Bras</li>
+          <li className="cursor-pointer transition-colors duration-300 hover:text-red-500">Tops & T-Shirts</li>
+          <li className="cursor-pointer transition-colors duration-300 hover:text-red-500">Hoodies & Sweatshirts</li>
+          <li className="cursor-pointer transition-colors duration-300 hover:text-red-500">Jackets</li>
+          <li className="cursor-pointer transition-colors duration-300 hover:text-red-500">Trousers & Tights</li>
+          <li className="cursor-pointer transition-colors duration-300 hover:text-red-500">Shorts</li>
+          <li className="cursor-pointer transition-colors duration-300 hover:text-red-500">Tracksuits</li>
+          <li className="cursor-pointer transition-colors duration-300 hover:text-red-500">Jumpsuits & Rompers</li>
+          <li className="cursor-pointer transition-colors duration-300 hover:text-red-500">Skirts & Dresses</li>
+          <li className="cursor-pointer transition-colors duration-300 hover:text-red-500">Socks</li>
+          <li className="cursor-pointer transition-colors duration-300 hover:text-red-500">Accessories & Equipment</li>
+        </ul>
+
+      {/* Gender */}
+      <div>
+        <h3 className="font-semibold text-lg my-4">Gender</h3>
+        <ul className="space-y-1">
+          <li>
+            <label className="flex items-center space-x-2 cursor-pointer transition-colors duration-300 hover:text-red-500">
+              <input
+                type="checkbox"
+                className="form-checkbox rounded text-blue-600"
+              />
+              <span>Men</span>
+            </label>
+          </li>
+          <li>
+            <label className="flex items-center space-x-2 cursor-pointer transition-colors duration-300 hover:text-red-500">
+              <input
+                type="checkbox"
+                className="form-checkbox rounded text-blue-600"
+              />
+              <span>Women</span>
+            </label>
+          </li>
+          <li>
+            <label className="flex items-center space-x-2 cursor-pointer transition-colors duration-300 hover:text-red-500">
+              <input
+                type="checkbox"
+                className="form-checkbox rounded text-blue-600"
+              />
+              <span>Unisex</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      {/* Kids */}
+      <div>
+        <h3 className="font-semibold text-lg my-4">Kids</h3>
+        <ul className="space-y-1">
+          <li>
+            <label className="flex items-center space-x-2 cursor-pointer transition-colors duration-300 hover:text-red-500">
+              <input
+                type="checkbox"
+                className="form-checkbox rounded text-blue-600"
+              />
+              <span>Boys</span>
+            </label>
+          </li>
+          <li>
+            <label className="flex items-center space-x-2 cursor-pointer transition-colors duration-300 hover:text-red-500">
+              <input
+                type="checkbox"
+                className="form-checkbox rounded text-blue-600"
+              />
+              <span>Girls</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      {/* Shop by Price */}
+      <div>
+        <h3 className="font-semibold text-lg my-4">Shop By Price</h3>
+        <ul className="space-y-1">
+          <li>
+            <label className="flex items-center space-x-2 cursor-pointer transition-colors duration-300 hover:text-red-500">
+              <input
+                type="checkbox"
+                className="form-checkbox rounded text-blue-600"
+              />
+              <span>Under 2,500 PKR</span>
+            </label>
+          </li>
+          <li>
+            <label className="flex items-center space-x-2 cursor-pointer transition-colors duration-300 hover:text-red-500">
+              <input
+                type="checkbox"
+                className="form-checkbox rounded text-blue-600"
+              />
+              <span> 2,500 PKR - 5,000 PKR</span>
+            </label>
+          </li>
+        </ul>
+      </div>
         </div>
 
         {/* Main Content */}

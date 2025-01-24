@@ -16,25 +16,29 @@ export default function Header() {
         
         <ul className="hidden md:flex list-none gap-5">
             <li className="font-bold cursor-pointer transition-colors duration-300 hover:text-red-500">
-              <Link href="/">New & Featured</Link>
+              <Link href="/">Home</Link>
+            </li>
+
+            <li className="font-bold cursor-pointer transition-colors duration-300 hover:text-red-500">
+              <Link href="/AllProducts">New & Featured</Link>
             </li>
             
             <li className="font-bold cursor-pointer transition-colors duration-300 hover:text-red-500">
-              <Link href="/">Men</Link>
+              <Link href="/AllProducts">Men</Link>
             </li>
             
             <li className="font-bold cursor-pointer transition-colors duration-300 hover:text-red-500">
-              <Link href="/">Women</Link>
+              <Link href="/AllProducts">Women</Link>
             </li>
             
             <li className="font-bold cursor-pointer transition-colors duration-300 hover:text-red-500">
-              <Link href="/">Kids</Link>
+              <Link href="/AllProducts">Kids</Link>
             </li>
             <li className="font-bold cursor-pointer transition-colors duration-300 hover:text-red-500">
-              <Link href="/">Sale</Link>
+              <Link href="/AllProducts">Sale</Link>
             </li>
             <li className="font-bold cursor-pointer transition-colors duration-300 hover:text-red-500">
-              <Link href="/">SNKRS</Link>
+              <Link href="/AllProducts">SNKRS</Link>
             </li>
         </ul>
       
@@ -54,8 +58,9 @@ export default function Header() {
              <input className="block focus-visible:outline-none w-[64%] bg-gray-100 " type="text" placeholder="Search" />
           </div>
           <div className="md:hidden"><FiSearch className="flex justify-center items-center size-6 cursor-pointer transition-colors duration-300 hover:text-red-500" /></div>
-          <div ><FiHeart className="flex justify-center items-center size-6 cursor-pointer transition-colors duration-300 hover:text-red-500" /></div>
-          <div ><IoBagOutline style={{strokeWidth:"200"}} className="flex justify-center items-center size-6 cursor-pointer transition-colors duration-300 hover:text-red-500" /></div>
+          <Link href="/Wishlist"> <FiHeart className="flex justify-center items-center size-6 cursor-pointer transition-colors duration-300 hover:text-red-500" /> </Link>
+          <Link href="/Cart"> <IoBagOutline style={{strokeWidth:"200"}} className="flex justify-center items-center size-6 cursor-pointer transition-colors duration-300 hover:text-red-500" /> </Link>
+    
           <div className="md:hidden ">
           <Sidebar> 
           {/* Sidebar content */}

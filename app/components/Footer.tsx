@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-     <footer className="w-screen bg-black text-white p-10 text-sm font-sans">
+     <footer className="w-screen bg-black text-white p-10 text-sm font-sans ">
         <div className="flex justify-between mb-5">
       
       <div className="flex-1 mx-5">

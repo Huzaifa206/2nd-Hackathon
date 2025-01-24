@@ -1,11 +1,13 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { FiSearch } from "react-icons/fi";
 import { FiHeart } from "react-icons/fi";
 import { IoBagOutline } from "react-icons/io5";
-import { IoMenu } from "react-icons/io5";
+import { FaHome } from "react-icons/fa";
+import { AiFillProduct } from "react-icons/ai";
+import { IoHelp } from "react-icons/io5";
 import Sidebar from "./Sidebar";
+
 
 export default function Header() {
     return (
@@ -64,11 +66,45 @@ export default function Header() {
           <div className="md:hidden ">
           <Sidebar> 
           {/* Sidebar content */}
-          <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-          </ul>
+          <div className="w-64 h-screen bg-[#666666] text-white flex flex-col p-6 space-y-6">
+      {/* Top Section */}
+      <div className="space-y-4">
+        <p className="text-sm text-gray-200">
+          Become a member for the best products, inspiration, and stories in sport.{" "}
+          <span className="text-blue-300 font-medium cursor-pointer hover:underline">
+            Learn more
+          </span>
+        </p>
+
+        <div className="flex space-x-4">
+          {/* Join Us Button */}
+          <button className="flex-1 py-2 px-4 rounded-full bg-white text-black font-medium hover:bg-gray-200 transition duration-200">
+            Join Us
+          </button>
+          {/* Sign In Button */}
+          <button className="flex-1 py-2 px-4 rounded-full border border-white text-white font-medium hover:bg-gray-500 transition duration-200">
+            Sign In
+          </button>
+        </div>
+      </div>
+
+      {/* Navigation Links */}
+      <div className="space-y-2">
+        <button className="flex items-center space-x-4 w-full py-2 text-left hover:bg-gray-600 rounded-md transition duration-200">
+          <span className="text-lg"><FaHome /></span>
+          <span className="font-medium">Home</span>
+        </button>
+        <button className="flex items-center space-x-4 w-full py-2 text-left hover:bg-gray-600 rounded-md transition duration-200">
+          <span className="text-lg"><AiFillProduct /></span>
+          <Link href="/AllProducts"><span className="font-medium">Products</span></Link>
+        </button>
+        <button className="flex items-center space-x-4 w-full py-2 text-left hover:bg-gray-600 rounded-md transition duration-200">
+          <span className="text-lg"><IoHelp /></span>
+          <span className="font-medium">Help</span>
+        </button>
+        
+      </div>
+    </div>
         </Sidebar>
 </div>
           

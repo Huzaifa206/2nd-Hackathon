@@ -21,12 +21,12 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
            <div className="md:hidden "><IoMenu className="flex justify-center items-center size-6 cursor-pointer transition-colors duration-300 hover:text-red-500" /></div>
         </button>
         <div
-          className={`z-50 fixed top-0 right-0 h-screen w-64 bg-gray-900 text-white transform transition-transform ${
+          className={`z-50 fixed top-0 right-0 h-screen w-64 bg-[#666666] text-white transform transition-transform ${
             isSidebarOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
             <button onClick={toggleSidebar!}>
-           <div className="md:hidden"><IoMenu className="flex justify-center items-center size-6 cursor-pointer transition-colors duration-300 hover:text-red-500" /></div>
+           <div className=" md:hidden"><IoMenu className="ml-5 mt-4 flex justify-center items-center size-6 cursor-pointer transition-colors duration-300 hover:text-red-500" /></div>
         </button>
           {children}
         </div>

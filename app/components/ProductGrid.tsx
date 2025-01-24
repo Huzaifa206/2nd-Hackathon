@@ -37,11 +37,11 @@ interface Product {
 
 const ProductGrid: React.FC = () => {
   const products: Product[] = [
-    { name: "Nike Air Max Pulse", price: "$10,000", image: "/14.jpeg" },
-    { name: "Nike Air Max 97 SE", price: "$20,000", image: "/13.jpeg" },
-    { name: "Nike Air Max Pulse", price: "$30,000", image: "/12.jpeg" },
-    { name: "Nike Air Max Pulse", price: "$30,000", image: "/15.jpeg" },
-    { name: "Nike Air Max Pulse", price: "$30,000", image: "/11.jpeg" },
+    { name: "Nike Air Max Pulse", price: "$10,000", image: "/one.png" },
+    { name: "Nike Air Max 97 SE", price: "$20,000", image: "/two.png" },
+    { name: "Nike Air Max Pulse", price: "$30,000", image: "/three.png" },
+    { name: "Nike Air Max Pulse", price: "$30,000", image: "/four.png" },
+    { name: "Nike Air Max Pulse", price: "$30,000", image: "/five.png" },
     
   ];
 

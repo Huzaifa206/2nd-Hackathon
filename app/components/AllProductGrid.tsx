@@ -56,7 +56,7 @@ const AllProductGrid = () => {
         {/* Sidebar */}
         <div
           ref={sidebarRef}
-          className={`fixed inset-0 p-4 pl-10 overflow-y-scroll transform transition-transform duration-300 z-10 ${
+          className={`bg-white fixed inset-0 p-4 pl-10 overflow-y-scroll transform transition-transform duration-300 z-10 ${
             isSidebarVisible ? 'translate-x-0' : '-translate-x-full'
           } md:static md:translate-x-0 w-[40%] md:w-[20%] md:flex md:flex-col`}
         >

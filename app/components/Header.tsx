@@ -5,7 +5,6 @@ import { FiHeart } from "react-icons/fi";
 import { IoBagOutline } from "react-icons/io5";
 import Sidebar from "./Sidebar";
 
-
 export default function Header() {
     return (
       <header className="w-screen flex justify-between items-center py-3 px-7 md:px-12 bg-white shadow-md">

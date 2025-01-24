@@ -1,4 +1,4 @@
-
+"use client";
 import { FaHome } from "react-icons/fa";
 import { AiFillProduct } from "react-icons/ai";
 import { IoHelp } from "react-icons/io5";

@@ -1,6 +1,5 @@
 import ProductGrid from './components/ProductGrid';
 import Essential from "./components/Essentials";
-import Head from "next/head";
 import Hero from "./components/Hero";
 import Featured from "./components/Featured";
 

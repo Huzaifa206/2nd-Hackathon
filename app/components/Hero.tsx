@@ -11,7 +11,7 @@ export default function Hero() {
              </p>
              <div className="flex justify-center flex-wrap gap-2.5">
              <button className="px-5 py-2.5 rounded-full bg-black text-white text-base cursor-pointer transition-colors duration-300 hover:bg-red-500">Notify Me</button>
-             <button className="px-5 py-2.5 rounded-full bg-gray-500 text-white text-base cursor-pointer transition-colors duration-300">Shop Air Max</button>
+             <button className="px-5 py-2.5 rounded-full bg-gray-500 text-white text-base cursor-pointer transition-colors duration-300  hover:bg-red-500">Shop Air Max</button>
              </div> 
     </div>
   );

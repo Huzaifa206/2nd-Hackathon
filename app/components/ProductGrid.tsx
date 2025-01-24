@@ -24,11 +24,10 @@
 //     );
 //   }
 
-'use client';
+"use client";
 import React, { useRef } from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
-import { MdChevronRight } from "react-icons/md";
 
 interface Product {
   name: string;

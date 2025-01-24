@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 export default function Featured() {
   return (
     <div className="text-center w-screen">
@@ -12,7 +12,8 @@ export default function Featured() {
           Cause everyone should know the feeling of running in that perfect
           pair.
         </p>
-        <button>Find Your Shoe</button>
+        <button className="px-5 py-2.5 rounded-full bg-black text-white text-base cursor-pointer transition-colors duration-300 hover:bg-red-500">Find Your Shoe</button>
+
       </div>
        </div>
   );

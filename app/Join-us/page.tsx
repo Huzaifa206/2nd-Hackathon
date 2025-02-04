@@ -7,7 +7,7 @@ export default function JoinUs() {
            <Image className="pb-5" src="/TickLogo.png" width={40} height={10} alt="Logo" />
            <h2 className="uppercase text-center font-bold pb-5"> BECOME A NIKE MEMBER </h2>
            <p className='w-80 text-center text-text-secondary-gray pb-5'>Create your Nike Member profile and get first access to the very best of Nike products, inspiration and community.</p>
-           <form action="" className="flex flex-col justify-center items-center w-96 my-2">
+           <form action="" className="flex flex-col mx-auto w-96 my-2">
              <input className="w-80 md:w-96 border-[#E5E5E5] rounded-md mb-4 px-4 py-3 border-[2px] placeholder:text-text-secondary-gray" type="text" placeholder="Email Address" />
              <input className="w-80 md:w-96 border-[#E5E5E5] rounded-md mb-4 px-4 py-3 border-[2px] placeholder:text-text-secondary-gray" type="text" placeholder="Password" />
              <input className="w-80 md:w-96 border-[#E5E5E5] rounded-md mb-4 px-4 py-3 border-[2px] placeholder:text-text-secondary-gray" type="text" placeholder="First Name" />

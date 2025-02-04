@@ -8,9 +8,9 @@ export default function Login() {
         <h2 className="uppercase w-40 text-center font-bold pb-5">
           YOUR ACCOUNT FOR EVERYTHING NIKE
         </h2>
-        <form action="" className="flex flex-col justify-center items-center w-[90%] my-5 md:my-0">
-          <input className="w-80 md:w-96 border-[#E5E5E5] rounded-md mb-4 px-4 py-3 border-[2px] placeholder:text-text-secondary-gray" type="text" placeholder="Email Address" />
-          <input className="w-80 md:w-96 border-[#E5E5E5] rounded-md mb-4 px-4 py-3 border-[2px] placeholder:text-text-secondary-gray" type="text" placeholder="Password" />
+        <form action="" className="flex flex-col mx-auto w-96 my-5 md:my-0">
+          <input className="mx-auto w-80 md:w-96 border-[#E5E5E5] rounded-md mb-4 px-4 py-3 border-[2px] placeholder:text-text-secondary-gray" type="text" placeholder="Email Address" />
+          <input className="mx-auto w-80 md:w-96 border-[#E5E5E5] rounded-md mb-4 px-4 py-3 border-[2px] placeholder:text-text-secondary-gray" type="text" placeholder="Password" />
           <div className="flex justify-between items-center py-3 flex-col md:flex-row gap-2">
             <div>
               <input type="checkbox" id="remember" />

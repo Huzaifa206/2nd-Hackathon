@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function JoinUs() {
     return (
-    <div className="flex flex-col items-center py-10">
+    <div className="flex flex-col items-center py-10 box-border">
            <Image className="pb-5" src="/TickLogo.png" width={40} height={10} alt="Logo" />
-           <h2 className="uppercase text-center font-bold pb-5"> BECOME A NIKE MEMBER </h2>
-           <p className='w-80 text-center  pb-5'>Create your Nike Member profile and get first access to the very best of Nike products, inspiration and community.</p>
+           <h2 className="mx-auto w-80 md:w-96 uppercase text-center font-bold pb-5"> BECOME A NIKE MEMBER </h2>
+           <p className='mx-auto w-80 md:w-96 text-center  pb-5'>Create your Nike Member profile and get first access to the very best of Nike products, inspiration and community.</p>
            <form action="" className="flex flex-col mx-auto w-96">
              <input className="mx-auto w-80 md:w-96 border-[#E5E5E5] rounded-md mb-4 px-4 py-3 border-[2px] " type="text" placeholder="Email Address" />
              <input className="mx-auto w-80 md:w-96 border-[#E5E5E5] rounded-md mb-4 px-4 py-3 border-[2px] " type="text" placeholder="Password" />

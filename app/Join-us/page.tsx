@@ -28,12 +28,12 @@ export default function JoinUs() {
       <div className="flex justify-between items-center py-7 mx-auto text-sm md:text-base">
         <div>
           <input type="checkbox" id="remember" />
-          <label className="ml-2 pl-2 cursor-pointer text-text-secondary-gray" htmlFor="remember">
+          <label className="mx-auto w-80 md:w-96 pl-2 cursor-pointer text-secondary-gray" htmlFor="remember">
             Sign up for emails to get updates from Nike on products, offers and your Member benefits
           </label>
         </div>
       </div>
-      <p className="mx-auto text-sm md:text-base text-text-secondary-gray text-center pb-6">By creating an account, you agree to Nike's Privacy Policy and Terms of Use.</p>
+      <p className="mx-auto w-80 md:w-96 text-sm md:text-base text-secondary-gray text-center pb-6">By creating an account, you agree to Nike's Privacy Policy and Terms of Use.</p>
       <button className="mx-auto w-80 md:w-96 rounded-sm py-3 bg-black text-white mb-2 hover:bg-slate-700">Sign Up</button>
       <p className="text-center"> <span className="text-text-secondary-gray">Already a Member? </span><Link href="/Login" className="flex justify-center font-bold cursor-pointer transition-colors duration-300 hover:text-red-500 underline" >Sign In</Link></p>
     </form>

@@ -1,5 +1,10 @@
 "use client";
+import Image from 'next/image';
+import { client } from '@/sanity/lib/client';
+import { allProducts } from '@/sanity/lib/queries';
+import { Product } from '@/types/products';
 import React, { useState, useRef, useEffect } from 'react';
+import { urlFor } from '@/sanity/lib/image';
 
 const AllProductGrid = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false); // Sidebar visibility state
@@ -26,31 +31,39 @@ const AllProductGrid = () => {
     };
   }, [isSidebarVisible]);
 
-  const products = [
-    { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/one.png' },
-    { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/two.png' },
-    { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/three.png' },
-    { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/four.png' },
-    { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/five.png' },
-    { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/six.png' },
-    { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/seven.png' },
-    { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/eight.png' },
-    { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/nine.png' },
-    { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/ten.png' },
-    { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/eleven.png' },
-    { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/twelve.png' },
-    { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/thirteen.png' },
-    { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/fourteen.png' },
-    { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/fifteen.png' },
-    { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/sixteen.png' },
-    { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/seventeen.png' },
-    { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/eighteen.png' },
-    { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/nineteen.png' },
-    { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/twenty.png' },
-    { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/twentyone.png' },
-    { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/twentytwo.png' },
-    { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/twentythree.png' },
-  ];
+  // const products = [
+  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/one.png' },
+  //   { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/two.png' },
+  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/three.png' },
+  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/four.png' },
+  //   { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/five.png' },
+  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/six.png' },
+  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/seven.png' },
+  //   { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/eight.png' },
+  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/nine.png' },
+  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/ten.png' },
+  //   { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/eleven.png' },
+  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/twelve.png' },
+  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/thirteen.png' },
+  //   { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/fourteen.png' },
+  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/fifteen.png' },
+  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/sixteen.png' },
+  //   { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/seventeen.png' },
+  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/eighteen.png' },
+  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/nineteen.png' },
+  //   { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/twenty.png' },
+  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/twentyone.png' },
+  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/twentytwo.png' },
+  //   { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/twentythree.png' },
+  // ];
+  const [product, setProduct] = useState<Product[]>([])
+  useEffect(() => {
+    async function fetchproducts(){
+      const fetchedProduct : Product[] = await client.fetch(allProducts)
+      setProduct(fetchedProduct)
+    }
+    fetchproducts();
+  },[])
   
 
   return (
@@ -177,18 +190,24 @@ const AllProductGrid = () => {
 
         {/* Main Content */}
         <section className="grid grid-cols-2 lg:grid-cols-4 gap-1 p-1 md:p-5 w-full ">
-          {products.map((product, index) => (
+          {product.map((product) => (
             <div
-              key={index}
+              key={product._id}
               className="bg-white rounded-lg  p-1 text-center"
             >
-              <img
-                src={product.image}
-                alt={product.name}
+              {product.image && (
+                <Image src={urlFor(product.image).url()} 
+                width={200} 
+                height={150} 
+                alt={product.productName}
                 className="w-full h-auto object-cover rounded-md mb-4"
-              />
-              <h3 className="font-semibold text-lg">{product.name}</h3>
-              <p className="text-gray-500">{product.price}</p>
+                layout="responsive" />
+              )}
+              <p className="font-semibold text-base">{product.productName}</p>
+              <p>{product.category}</p>
+              <p className="text-black">{product.price} PKR</p>
+              <button className="px-4 py-2 rounded-full bg-gray-500 text-white text-sm cursor-pointer transition-colors duration-300 hover:bg-red-500">Add to Cart</button>
+              
             </div>
           ))}
         </section>

@@ -179,9 +179,9 @@ const AllProductGrid = () => {
                 layout="responsive" />
               )}
               <p className="font-semibold text-base">{product.productName}</p>
-              <p>{product.category}</p>
-              <p className="text-black">{product.price} PKR</p>
-              <button className="px-4 py-2 rounded-full bg-gray-500 text-white text-sm cursor-pointer transition-colors duration-300 hover:bg-red-500">Add to Cart</button>
+              <p className='text-gray-500'>{product.category}</p>
+              <p className="font-semibold text-base">{product.price} PKR</p>
+              <button className="my-1 px-4 py-2 rounded-full bg-gray-500 text-white text-sm cursor-pointer transition-colors duration-300 hover:bg-red-500">Add to Cart</button>
               
             </div>
           ))}

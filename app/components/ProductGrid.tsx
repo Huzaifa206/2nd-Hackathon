@@ -25,25 +25,17 @@
 //   }
 
 "use client";
-import React, { useRef } from "react";
+import Image from 'next/image';
+import React, { useState, useRef, useEffect } from 'react';
+import { client } from '@/sanity/lib/client';
+import { FiveProducts } from '@/sanity/lib/queries';
+import { Product } from '@/types/products';
+import { urlFor } from '@/sanity/lib/image';
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 
-interface Product {
-  name: string;
-  price: string;
-  image: string;
-}
 
 const ProductGrid: React.FC = () => {
-  const products: Product[] = [
-    { name: "Nike Air Max Pulse", price: "$10,000", image: "/one.png" },
-    { name: "Nike Air Max 97 SE", price: "$20,000", image: "/two.png" },
-    { name: "Nike Air Max Pulse", price: "$30,000", image: "/three.png" },
-    { name: "Nike Air Max Pulse", price: "$30,000", image: "/four.png" },
-    { name: "Nike Air Max Pulse", price: "$30,000", image: "/five.png" },
-    
-  ];
 
   const sliderRef = useRef<HTMLDivElement>(null);
 
@@ -59,21 +51,31 @@ const ProductGrid: React.FC = () => {
     }
   };
 
+  const [product, setProduct] = useState<Product[]>([])
+    useEffect(() => {
+      async function fetchproducts(){
+        const fetchedProduct : Product[] = await client.fetch(FiveProducts)
+        setProduct(fetchedProduct)
+      }
+      fetchproducts();
+    },[])
+    
+
   return (
     <div className="relative">
       <div className="flex justify-between items-center px-5 md:px-7">
         <h1 className="flex items-center font-semibold  md:text-xl ml-2 md:ml-7 mt-7">Best of Air Max</h1>
         <div className="flex justify-evenly items-center gap-2 mr-2 md:mr-7 mt-7">
         <button className="font-semibold md:text-xl p-2 cursor-pointer hover:text-red-500">Shop Now</button>
-        <div className="flex justify-evenly items-center gap-2 ml-1 mr-2" >
+        <div className="flex justify-evenly items-center gap-2 ml-1 mr-2 relative">
           <button
             onClick={scrollLeft}
-            className="bg-gray-200 p-2 rounded-full shadow-md hover:bg-gray-300"
+            className="bg-gray-200 p-2 rounded-full shadow-md hover:bg-gray-300 absolute top-60 right-[82vw] md:static"
           >
-            <MdKeyboardArrowLeft className="size-4 md:size-5" />
+            <MdKeyboardArrowLeft className="size-8 md:size-6 " />
           </button>
-          <button onClick={scrollRight} className="bg-gray-200 p-2 rounded-full shadow-md hover:bg-gray-300">
-           <MdKeyboardArrowRight className="size-4 md:size-5" />
+          <button onClick={scrollRight} className="bg-gray-200 p-2 rounded-full shadow-md hover:bg-gray-300 absolute top-60 md:static">
+           <MdKeyboardArrowRight className="relative size-8 md:size-6" />
           </button>
           </div>
         </div>
@@ -81,16 +83,18 @@ const ProductGrid: React.FC = () => {
       <div
         ref={sliderRef}
         className="flex gap-5 overflow-x-hidden scroll-smooth mt-5 px-7 md:px-14">
-        {products.map((product, index) => (
+        {product.map((product) => (
           <div
-            key={index}
+            key={product._id}
             className="bg-white p-3.5 rounded-lg text-center shadow-md min-w-[90%] md:min-w-[30%]">
-            <img
-              src={product.image}
-              className="max-w-full min-w-full h-auto mb-2.5"
-              alt={product.name}
-            />
-            <h3 className="font-medium">{product.name}</h3>
+              {product.image && (<Image src={urlFor(product.image).url()} 
+                              width={200} 
+                              height={150} 
+                              alt={product.productName}
+                              className="max-w-full min-w-full h-auto mb-2.5"
+                              layout="responsive" />
+              )}
+            <h3 className="font-medium">{product.productName}</h3>
             <p className="text-gray-600">{product.price}</p>
           </div>
         ))}

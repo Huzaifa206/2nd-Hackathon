@@ -25,13 +25,13 @@ export default function JoinUs() {
         <div className='border-[#E5E5E5] rounded-md py-4 border-[2px] w-[50%] text-center text-text-secondary-gray'>Male</div>
         <div className='border-[#E5E5E5] rounded-md py-4 border-[2px] w-[50%] text-center text-text-secondary-gray'>Female</div>
       </div>
-      <div className="flex justify-between items-center py-7 mx-auto text-sm md:text-base">
-        <div>
+      <div className="flex justify-between items-center py-7 mx-auto w-80 md:w-96 text-sm md:text-base">
+        
           <input type="checkbox" id="remember" />
           <label className="mx-auto w-80 md:w-96 pl-2 cursor-pointer text-secondary-gray" htmlFor="remember">
             Sign up for emails to get updates from Nike on products, offers and your Member benefits
           </label>
-        </div>
+      
       </div>
       <p className="mx-auto w-80 md:w-96 text-sm md:text-base text-secondary-gray text-center pb-6">By creating an account, you agree to Nike's Privacy Policy and Terms of Use.</p>
       <button className="mx-auto w-80 md:w-96 rounded-sm py-3 bg-black text-white mb-2 hover:bg-slate-700">Sign Up</button>

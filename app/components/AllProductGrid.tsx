@@ -31,31 +31,6 @@ const AllProductGrid = () => {
     };
   }, [isSidebarVisible]);
 
-  // const products = [
-  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/one.png' },
-  //   { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/two.png' },
-  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/three.png' },
-  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/four.png' },
-  //   { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/five.png' },
-  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/six.png' },
-  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/seven.png' },
-  //   { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/eight.png' },
-  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/nine.png' },
-  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/ten.png' },
-  //   { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/eleven.png' },
-  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/twelve.png' },
-  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/thirteen.png' },
-  //   { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/fourteen.png' },
-  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/fifteen.png' },
-  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/sixteen.png' },
-  //   { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/seventeen.png' },
-  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/eighteen.png' },
-  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/nineteen.png' },
-  //   { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/twenty.png' },
-  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/twentyone.png' },
-  //   { name: 'Nike Air Max Pulse', price: '₹13,995', image: '/twentytwo.png' },
-  //   { name: 'Nike Air Max 97 SE', price: '₹16,995', image: '/twentythree.png' },
-  // ];
   const [product, setProduct] = useState<Product[]>([])
   useEffect(() => {
     async function fetchproducts(){

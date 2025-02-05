@@ -8,23 +8,23 @@ export default function Login() {
         <h2 className="uppercase w-40 text-center font-bold pb-5">
           YOUR ACCOUNT FOR EVERYTHING NIKE
         </h2>
-        <form action="" className="flex flex-col mx-auto my-0">
-          <input className="mx-auto w-80 md:w-96 border-[#E5E5E5] rounded-md mb-4 px-4 py-3 border-[2px] placeholder:text-text-secondary-gray" type="text" placeholder="Email Address" />
-          <input className="mx-auto w-80 md:w-96 border-[#E5E5E5] rounded-md mb-4 px-4 py-3 border-[2px] placeholder:text-text-secondary-gray" type="text" placeholder="Password" />
+        <form action="" className="flex flex-col mx-auto ">
+          <input className="mx-auto w-80 md:w-96 border-gray-300 rounded-md mb-4 px-4 py-3 border-[2px] placeholder:text-text-secondary-gray" type="text" placeholder="Email Address" />
+          <input className="mx-auto w-80 md:w-96 border-gray-300 rounded-md mb-4 px-4 py-3 border-[2px] placeholder:text-text-secondary-gray" type="text" placeholder="Password" />
           <div className="flex justify-between items-center py-3 flex-col md:flex-row gap-2">
             <div>
               <input type="checkbox" id="remember" />
-              <label className="mr-4 pl-2 cursor-pointer text-text-secondary-gray" htmlFor="remember">
+              <label className="pl-2 cursor-pointer text-text-secondary-gray" htmlFor="remember">
                   Keep me signed in
               </label>
             </div>
             <div>
               <span>
-                <p className="text-[#BCBCBC] ">Forgotten your password?</p>
+                <p className="text-gray-400 ">Forgotten your password?</p>
               </span>
             </div>
           </div>
-          <p className="text-text-secondary-gray text-center pb-6 text-sm md:text-base mx-auto">By logging in, you agree to Nike's <span> Privacy Policy</span> and <span>Terms of Use</span>.
+          <p className="text-secondary-gray text-center pb-6 text-sm md:text-base mx-auto">By logging in, you agree to Nike's <span> Privacy Policy</span> and <span>Terms of Use</span>.
          </p>
           <button className="rounded-sm mx-auto w-80 md:w-96 py-3 bg-black mb-4 text-white text-center  hover:bg-slate-700">Sign in</button> 
           <p className="text-center"> <span className="text-text-secondary-gray">Not a Member? </span></p>

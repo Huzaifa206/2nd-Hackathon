@@ -71,11 +71,11 @@ const ProductGrid: React.FC = () => {
         <div className="flex justify-evenly items-center gap-2 ml-1 mr-2 relative">
           <button
             onClick={scrollLeft}
-            className="bg-gray-200 p-2 rounded-full shadow-md hover:bg-gray-300 absolute top-50 right-[80vw] md:static"
+            className="bg-gray-200 p-2 rounded-full shadow-md hover:bg-gray-300 absolute top-52 right-[75vw] md:static"
           >
             <MdKeyboardArrowLeft className="size-8 md:size-6 " />
           </button>
-          <button onClick={scrollRight} className="bg-gray-200 p-2 rounded-full shadow-md hover:bg-gray-300 absolute top-50 md:static">
+          <button onClick={scrollRight} className="bg-gray-200 p-2 rounded-full shadow-md hover:bg-gray-300 absolute top-52 md:static">
            <MdKeyboardArrowRight className="relative size-8 md:size-6" />
           </button>
           </div>

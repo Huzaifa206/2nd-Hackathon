@@ -25,6 +25,7 @@
 //   }
 
 "use client";
+import Link from 'next/link';
 import Image from 'next/image';
 import React, { useState, useRef, useEffect } from 'react';
 import { client } from '@/sanity/lib/client';
@@ -66,15 +67,15 @@ const ProductGrid: React.FC = () => {
       <div className="flex justify-between items-center px-5 md:px-7">
         <h1 className="flex items-center font-semibold  md:text-xl ml-2 md:ml-7 mt-7">Best of Air Max</h1>
         <div className="flex justify-evenly items-center gap-2 mr-2 md:mr-7 mt-7">
-        <button className="font-semibold md:text-xl p-2 cursor-pointer hover:text-red-500">Shop Now</button>
+        <Link href="/AllProducts" className="font-semibold md:text-xl p-2 cursor-pointer hover:text-red-500">Shop Now</Link>
         <div className="flex justify-evenly items-center gap-2 ml-1 mr-2 relative">
           <button
             onClick={scrollLeft}
-            className="bg-gray-200 p-2 rounded-full shadow-md hover:bg-gray-300 absolute top-60 right-[82vw] md:static"
+            className="bg-gray-200 p-2 rounded-full shadow-md hover:bg-gray-300 absolute top-50 right-[80vw] md:static"
           >
             <MdKeyboardArrowLeft className="size-8 md:size-6 " />
           </button>
-          <button onClick={scrollRight} className="bg-gray-200 p-2 rounded-full shadow-md hover:bg-gray-300 absolute top-60 md:static">
+          <button onClick={scrollRight} className="bg-gray-200 p-2 rounded-full shadow-md hover:bg-gray-300 absolute top-50 md:static">
            <MdKeyboardArrowRight className="relative size-8 md:size-6" />
           </button>
           </div>

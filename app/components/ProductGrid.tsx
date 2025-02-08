@@ -88,6 +88,7 @@ const ProductGrid: React.FC = () => {
           <div
             key={product._id}
             className="bg-white p-3.5 rounded-lg text-center shadow-md min-w-[90%] md:min-w-[30%]">
+            <Link href={`/ProductDetails/${product.slug.current}`}>
               {product.image && (<Image src={urlFor(product.image).url()} 
                               width={200} 
                               height={150} 
@@ -97,6 +98,7 @@ const ProductGrid: React.FC = () => {
               )}
             <h3 className="font-medium">{product.productName}</h3>
             <p className="text-gray-600">{product.price}</p>
+            </Link>
           </div>
         ))}
       </div>

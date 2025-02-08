@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import Image from 'next/image';
 import { client } from '@/sanity/lib/client';
 import { allProducts } from '@/sanity/lib/queries';
@@ -170,7 +171,7 @@ const AllProductGrid = () => {
               key={product._id}
               className="bg-white rounded-lg  p-1 text-center"
             >
-              
+              <Link href={`/ProductDetails/${product.slug.current}`}>
               {product.image && (
                 <Image src={urlFor(product.image).url()} 
                 width={200} 
@@ -183,7 +184,7 @@ const AllProductGrid = () => {
               <p className='text-gray-500'>{product.category}</p>
               <p className="font-semibold text-base">{product.price} PKR</p>
               <button className="my-1 px-4 py-2 rounded-full bg-gray-500 text-white text-sm cursor-pointer transition-colors duration-300 hover:bg-red-500">Add to Cart</button>
-              
+              </Link>
             </div>
           ))}
         </section>

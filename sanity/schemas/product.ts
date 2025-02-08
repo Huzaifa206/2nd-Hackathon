@@ -1,4 +1,5 @@
-export const productSchema = {
+import { defineType } from "sanity"
+export const productSchema = defineType({
     name: 'product',
     title: 'Product',
     type: 'document',
@@ -7,6 +8,14 @@ export const productSchema = {
         name: 'productName',
         title: 'Product Name',
         type: 'string',
+      },
+      {
+        name:"slug",
+        title:"Slug",
+        type:"slug",
+        options: {
+          source: "productName",
+        }
       },
       {
         name: 'category',
@@ -48,4 +57,4 @@ export const productSchema = {
         type: 'text',
       },
     ],
-  }
+  })

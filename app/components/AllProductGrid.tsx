@@ -170,6 +170,7 @@ const AllProductGrid = () => {
               key={product._id}
               className="bg-white rounded-lg  p-1 text-center"
             >
+              
               {product.image && (
                 <Image src={urlFor(product.image).url()} 
                 width={200} 

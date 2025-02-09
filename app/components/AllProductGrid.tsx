@@ -6,6 +6,7 @@ import { allProducts } from '@/sanity/lib/queries';
 import { Product } from '@/types/products';
 import React, { useState, useRef, useEffect } from 'react';
 import { urlFor } from '@/sanity/lib/image';
+import { addToCart } from "../actions/actions";
 
 const AllProductGrid = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false); // Sidebar visibility state
@@ -40,6 +41,11 @@ const AllProductGrid = () => {
     }
     fetchproducts();
   },[])
+
+  const handleAddToCart = (e:React.MouseEvent, product:Product)=>{
+    e.preventDefault()
+    addToCart(product)
+  }
   
 
   return (

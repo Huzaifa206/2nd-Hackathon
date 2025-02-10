@@ -1,6 +1,8 @@
+"use client";
 import { Product } from "@/types/products";
 import { useEffect, useState } from "react";
 import { getCartItems } from "../actions/actions";
+
 
 export default function Cart() {
     const [cartItems,setCartItems]= useState<Product[]>([])
@@ -21,9 +23,9 @@ export default function Cart() {
               <li key={index} className="flex justify-between items-center border-b py-4">
                 <div>
                   <h3 className="text-lg font-semibold">itemname</h3>
-                  <p className="text-gray-500">${item.price} x item.quantity</p>
+                  <p className="text-gray-500">item.price x item.quantity</p>
                 </div>
-                <p className="text-lg font-semibold">(item.price * item.quantity).toFixed(2)</p>
+                <p className="text-lg font-semibold">item.price item.quantity</p>
               </li>
             ))}
           </ul>
@@ -36,7 +38,7 @@ export default function Cart() {
       {/* Total Bill Box */}
       <div className="w-full md:w-1/3 bg-gray-100 p-6 shadow-lg rounded-lg">
         <h2 className="text-xl font-bold mb-4">Total Bill</h2>
-        <p className="text-lg font-semibold">Total: total.toFixed(2)</p>
+        <p className="text-lg font-semibold">Total: total</p>
       </div>
     </div>
         </div>

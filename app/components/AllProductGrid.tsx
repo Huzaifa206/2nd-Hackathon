@@ -7,6 +7,7 @@ import { Product } from '@/types/products';
 import React, { useState, useRef, useEffect } from 'react';
 import { urlFor } from '@/sanity/lib/image';
 import { addToCart } from "../actions/actions";
+import Swal from "sweetalert2";
 
 const AllProductGrid = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false); // Sidebar visibility state
@@ -44,7 +45,21 @@ const AllProductGrid = () => {
 
   const handleAddToCart = (e:React.MouseEvent, product:Product)=>{
     e.preventDefault()
-    addToCart(product)
+    Swal.fire({
+      position:"center",
+      width: 400,
+      icon:"success",
+      theme:"light",
+      title:'<h5> ${product.productName} added to cart </h5>',
+      showConfirmButton:true ,
+      confirmButtonText: '<a href="/Cart">Checkout</a>',
+      confirmButtonColor:"black",
+      showCancelButton: true,
+      cancelButtonText: "Continue shopping",
+      timer:3000,
+
+    })
+    addToCart(product)  
   }
   
 
@@ -189,7 +204,12 @@ const AllProductGrid = () => {
               <p className="font-semibold text-base">{product.productName}</p>
               <p className='text-gray-500'>{product.category}</p>
               <p className="font-semibold text-base">{product.price} PKR</p>
-              <button className="my-1 px-4 py-2 rounded-full bg-gray-500 text-white text-sm cursor-pointer transition-colors duration-300 hover:bg-red-500">Add to Cart</button>
+              <button 
+              className="my-1 px-4 py-2 rounded-full bg-gray-500 text-white text-sm cursor-pointer transition-colors duration-300 hover:bg-red-500"
+              onClick={(e)=>handleAddToCart(e, product)}
+              >
+                Add to Cart
+                </button>
               </Link>
             </div>
           ))}

@@ -1,48 +1,122 @@
 "use client";
 import { Product } from "@/types/products";
 import { useEffect, useState } from "react";
-import { getCartItems } from "../actions/actions";
-
+import { getCartItems, removeFromCart, updateCartQuantity } from "../actions/actions";
+import Swal from "sweetalert2";
+import Image from 'next/image';
+import { urlFor } from '@/sanity/lib/image';
 
 export default function Cart() {
     const [cartItems,setCartItems]= useState<Product[]>([])
     useEffect(() => {
         setCartItems(getCartItems())
-    },[])
+    },[]);
+
+    const handleRemove = (id:string) =>{
+      Swal.fire({
+            position:"center",
+            width: 400,
+            icon:"question",
+            theme:"light",
+            title:`<h5>Do you want to remove this item?</h5>`,
+            showConfirmButton:true ,
+            confirmButtonText: "Remove",
+            confirmButtonColor:"black",
+            showCancelButton: true,
+            cancelButtonText: "Cancel",
+            timer:3000,
+      }).then((result) =>{
+        if(result.isConfirmed){
+          removeFromCart(id)
+          setCartItems(getCartItems())
+        }
+      })
+    }
+
+    const handleQuantityChange= (id:string ,quantity:number) =>{
+      updateCartQuantity(id,quantity)
+      setCartItems(getCartItems())
+    }
+
+    const handleIncrement = (id:string) =>{
+      const product =cartItems.find((item)=>item._id ===id);
+      if(product)
+        handleQuantityChange(id,product.inventory+1)
+    }
+
+    const handleDecrement = (id:string) =>{
+      const product =cartItems.find((item)=>item._id ===id);
+      if(product && product.inventory > 1)
+        handleQuantityChange(id,product.inventory-1)
+    }
+
+    const calculatedTotal =()=>{
+        return cartItems.reduce((total,item)=> total + item.price * item.inventory,0)
+    }
+
     return (
-        <div className="min-h-screen">
-            <div className="flex flex-col md:flex-row p-6 gap-6">
-      {/* Cart Items */}
-      <div className="w-full md:w-2/3 bg-white p-6 shadow-lg rounded-lg">
-        <h2 className="text-2xl font-bold mb-4">Shopping Cart</h2>
-        {cartItems.length === 0 ? (
-          <p className="text-gray-500">Your cart is empty.</p>
-        ) : (
-          <ul>
-            {cartItems.map((item, index) => (
-              <li key={index} className="flex justify-between items-center border-b py-4">
-                <div>
-                  <h3 className="text-lg font-semibold">itemname</h3>
-                  <p className="text-gray-500">item.price x item.quantity</p>
-                </div>
-                <p className="text-lg font-semibold">item.price item.quantity</p>
-              </li>
-            ))}
-          </ul>
-        )}
-        <button className="mt-6 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
-          Proceed to Checkout
-        </button>
-      </div>
-      
-      {/* Total Bill Box */}
-      <div className="w-full md:w-1/3 bg-gray-100 p-6 shadow-lg rounded-lg">
-        <h2 className="text-xl font-bold mb-4">Total Bill</h2>
-        <p className="text-lg font-semibold">Total: total</p>
-      </div>
-    </div>
+        <div className="min-h-screen p-6">
+          <div className="flex flex-col md:flex-row gap-6">
+            {/* Cart Items */}
+            <div className="w-full md:w-2/3 bg-white p-6 shadow-lg rounded-lg">
+              <h2 className="text-2xl font-bold mb-4">Shopping Cart</h2>
+              {cartItems.length === 0 ? (
+                <p className="text-gray-500">Your cart is empty.</p>
+              ) : (
+                <ul>
+                  {cartItems.map((item) => (
+                    <li key={item._id} className="flex justify-between items-center border-b py-4">
+                      <div>
+                      <div>
+                        {item.image && (
+                                        <Image src={urlFor(item.image).url()} 
+                                        width={500} 
+                                        height={500} 
+                                        alt={item.productName}
+                                        className="w-16 h-16 object-cover rounded-md"
+                                       />
+                                      )}
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold">{item.productName}</h3>
+                        <p className="text-gray-500">${item.price} x {item.inventory}</p>
+                      </div>
+                      </div>
+
+                      <div className="flex items-center gap-4">
+                        <button 
+                          onClick={() => handleDecrement(item._id)} 
+                          className="px-3 py-1 bg-gray-200 rounded-lg hover:bg-gray-300">
+                          -
+                        </button>
+                        <span>{item.inventory}</span>
+                        <button 
+                          onClick={() => handleIncrement(item._id)} 
+                          className="px-3 py-1 bg-gray-200 rounded-lg hover:bg-gray-300">
+                          +
+                        </button>
+                        <button 
+                          onClick={() => handleRemove(item._id)} 
+                          className="ml-4 px-3 py-1 bg-red-500 text-white rounded-lg hover:bg-red-600">
+                          Remove
+                        </button>
+                      </div>
+                      <p className="text-lg font-semibold">${(item.price * item.inventory).toFixed(2)}</p>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              <button className="mt-6 w-full bg-black text-white py-3 rounded-lg hover:bg-gray-700">
+                Proceed to Checkout
+              </button>
+            </div>
+            
+            {/* Total Bill Box */}
+            <div className="w-full md:w-1/3 bg-gray-100 p-6 shadow-lg rounded-lg">
+              <h2 className="text-xl font-bold mb-4">Total Bill</h2>
+              <p className="text-lg font-semibold">Total: Rs {calculatedTotal().toFixed(2)}</p>
+            </div>
+          </div>
         </div>
-    
     );
-  }
-  
+}

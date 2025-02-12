@@ -50,9 +50,9 @@ const AllProductGrid = () => {
       width: 400,
       icon:"success",
       theme:"light",
-      title:'<h5> ${product.productName} added to cart </h5>',
+      title:`<h5> ${product.productName} added to cart </h5>`,
       showConfirmButton:true ,
-      confirmButtonText: '<a href="/Cart">Checkout</a>',
+      confirmButtonText: `<a href="/Cart">Checkout</a>`,
       confirmButtonColor:"black",
       showCancelButton: true,
       cancelButtonText: "Continue shopping",
@@ -64,7 +64,7 @@ const AllProductGrid = () => {
   
 
   return (
-    <div className='bg-white border-t-2 border-gray-300'>
+    <div className='bg-white border-t-2 border-gray-300 min-h-screen'>
       <div className="flex items-center justify-between px-7 pt-7">
         <h1 className="font-semibold text-xl text-left">New(100)</h1>
         {/* Button to toggle sidebar */}

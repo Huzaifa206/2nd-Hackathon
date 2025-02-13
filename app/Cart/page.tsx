@@ -63,10 +63,11 @@ export default function Cart() {
               {cartItems.length === 0 ? (
                 <p className="text-gray-500">Your cart is empty.</p>
               ) : (
+                <div>
                 <ul>
                   {cartItems.map((item) => (
-                    <li key={item._id} className="flex justify-between items-center border-b py-4">
-                      <div>
+                    <li key={item._id} className="md:flex md:justify-between md:items-center border-b py-4">
+                      <div className="flex">
                       <div>
                         {item.image && (
                                         <Image src={urlFor(item.image).url()} 
@@ -83,6 +84,8 @@ export default function Cart() {
                       </div>
                       </div>
 
+
+                      <div className="flex md:gap-8 justify-between items-center">                 
                       <div className="flex items-center gap-4">
                         <button 
                           onClick={() => handleDecrement(item._id)} 
@@ -101,11 +104,15 @@ export default function Cart() {
                           Remove
                         </button>
                       </div>
-                      <p className="text-lg font-semibold">${(item.price * item.inventory).toFixed(2)}</p>
+                      <div><p className="text-lg font-semibold">${(item.price * item.inventory).toFixed(2)}</p></div>
+                      </div> 
                     </li>
                   ))}
                 </ul>
+                
+                </div>
               )}
+              
               <button className="mt-6 w-full bg-black text-white py-3 rounded-lg hover:bg-gray-700">
                 Proceed to Checkout
               </button>

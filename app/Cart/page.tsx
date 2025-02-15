@@ -54,6 +54,26 @@ export default function Cart() {
         return cartItems.reduce((total,item)=> total + item.price * item.inventory,0)
     }
 
+    const handleProceed =()=>{
+      Swal.fire({
+        position:"center",
+        width: 400,
+        icon:"question",
+        theme:"light",
+        title:`<h5>Proceed to Checkout?</h5>`,
+        showConfirmButton:true ,
+        confirmButtonText: "Proceed",
+        confirmButtonColor:"black",
+        showCancelButton: true,
+        timer:3000,
+  }).then((result) =>{
+    if(result.isConfirmed){
+      Swal.fire("Success","Your Order has been successfuly Proceeded","success")
+      setCartItems([])
+    }
+  })
+    }
+
     return (
         <div className="min-h-screen p-6">
           <div className="flex flex-col md:flex-row gap-6">
@@ -67,7 +87,7 @@ export default function Cart() {
                 <ul>
                   {cartItems.map((item) => (
                     <li key={item._id} className="md:flex md:justify-between md:items-center border-b py-4">
-                      <div className="flex">
+                      <div className="flex gap-4">
                       <div>
                         {item.image && (
                                         <Image src={urlFor(item.image).url()} 
@@ -79,14 +99,14 @@ export default function Cart() {
                                       )}
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold">{item.productName}</h3>
+                        <h3 className="text-md md:text-lg font-semibold">{item.productName}</h3>
                         <p className="text-gray-500">${item.price} x {item.inventory}</p>
                       </div>
                       </div>
 
 
-                      <div className="flex md:gap-8 justify-between items-center">                 
-                      <div className="flex items-center gap-4">
+                      <div className="md:flex md:gap-8 justify-between items-center">                 
+                      <div className="flex justify-start items-center gap-2 my-2">
                         <button 
                           onClick={() => handleDecrement(item._id)} 
                           className="px-3 py-1 bg-gray-200 rounded-lg hover:bg-gray-300">
@@ -104,7 +124,8 @@ export default function Cart() {
                           Remove
                         </button>
                       </div>
-                      <div><p className="text-lg font-semibold">${(item.price * item.inventory).toFixed(2)}</p></div>
+                      <div className="flex justify-end items-center">
+                        <p className="text-lg font-semibold ">${(item.price * item.inventory).toFixed(2)}</p></div>
                       </div> 
                     </li>
                   ))}
@@ -113,7 +134,7 @@ export default function Cart() {
                 </div>
               )}
               
-              <button className="mt-6 w-full bg-black text-white py-3 rounded-lg hover:bg-gray-700">
+              <button onClick={handleProceed} className="mt-6 w-full bg-black text-white py-3 rounded-lg hover:bg-gray-700">
                 Proceed to Checkout
               </button>
             </div>

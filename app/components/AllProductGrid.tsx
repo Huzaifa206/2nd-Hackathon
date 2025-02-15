@@ -50,7 +50,7 @@ const AllProductGrid = () => {
       width: 400,
       icon:"success",
       theme:"light",
-      title:`<h5> ${product.productName} added to cart </h5>`,
+      html: `<span style=" font-size: 1.5rem ;font-weight: bold;">${product.productName} added to Cart</span>`,
       showConfirmButton:true ,
       confirmButtonText: `<a href="/Cart">Checkout</a>`,
       confirmButtonColor:"black",
@@ -203,7 +203,8 @@ const AllProductGrid = () => {
               )}
               <p className="font-semibold text-base">{product.productName}</p>
               <p className='text-gray-500'>{product.category}</p>
-              <p className="font-semibold text-base">{product.price} PKR</p>
+              <p className="font-semibold text-base">Rs {product.price}</p>
+              
               <button 
               className="my-1 px-4 py-2 rounded-full bg-gray-500 text-white text-sm cursor-pointer transition-colors duration-300 hover:bg-red-500"
               onClick={(e)=>handleAddToCart(e, product)}

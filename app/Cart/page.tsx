@@ -100,7 +100,7 @@ export default function Cart() {
                       </div>
                       <div>
                         <h3 className="text-md md:text-lg font-semibold">{item.productName}</h3>
-                        <p className="text-gray-500">${item.price} x {item.inventory}</p>
+                        <p className="text-gray-500 text-md">Rs {item.price} x {item.inventory}</p>
                       </div>
                       </div>
 

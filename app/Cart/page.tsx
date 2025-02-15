@@ -105,8 +105,8 @@ export default function Cart() {
                       </div>
 
 
-                      <div className="md:flex md:gap-8 justify-between items-center">                 
-                      <div className="flex justify-start items-center gap-2 my-2">
+                      <div>                 
+                      <div className="flex justify-end items-center gap-2 my-2">
                         <button 
                           onClick={() => handleDecrement(item._id)} 
                           className="px-3 py-1 bg-gray-200 rounded-lg hover:bg-gray-300">
@@ -125,7 +125,7 @@ export default function Cart() {
                         </button>
                       </div>
                       <div className="flex justify-end items-center">
-                        <p className="text-lg font-semibold ">${(item.price * item.inventory).toFixed(2)}</p></div>
+                        <p className="text-lg font-semibold ">Rs {(item.price * item.inventory).toFixed(2)}</p></div>
                       </div> 
                     </li>
                   ))}

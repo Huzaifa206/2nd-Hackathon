@@ -18,7 +18,8 @@ export default function Cart() {
             width: 400,
             icon:"question",
             theme:"light",
-            title:`<h5>Do you want to remove this item?</h5>`,
+            html: '<span style=" font-size: 1.5rem ;font-weight: bold;"></span>',
+            title:`<h5></h5>`,
             showConfirmButton:true ,
             confirmButtonText: "Remove",
             confirmButtonColor:"black",
@@ -60,7 +61,7 @@ export default function Cart() {
         width: 400,
         icon:"question",
         theme:"light",
-        title:`<h5>Proceed to Checkout?</h5>`,
+        html: '<span style=" font-size: 1.5rem ;font-weight: bold;">Proceed to Checkout?</span>',
         showConfirmButton:true ,
         confirmButtonText: "Proceed",
         confirmButtonColor:"black",
@@ -68,7 +69,11 @@ export default function Cart() {
         timer:3000,
   }).then((result) =>{
     if(result.isConfirmed){
-      Swal.fire("Success","Your Order has been successfuly Proceeded","success")
+      Swal.fire({
+        icon:"success",
+        html:'<span style=" font-size: 1.5rem ;font-weight: bold;">Your Order has been Successfuly Proceeded</span>',
+        confirmButtonColor:"black",
+      })
       setCartItems([])
     }
   })
